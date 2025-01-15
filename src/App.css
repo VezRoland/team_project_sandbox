@@ -1,0 +1,7 @@
+.banner {
+  height: 20rem;
+  color: white;
+  background-image: linear-gradient(rgb(0, 0, 0, 0.75), rgb(255, 255, 255, 0.5)), url("pizza.jpg");
+  background-size: cover;
+  background-position: center;
+}
