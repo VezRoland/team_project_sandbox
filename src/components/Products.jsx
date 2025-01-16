@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { getProducts } from './utils'
+import { Modal } from './Modal'
 
 
 export const Products = () => {
@@ -18,7 +19,7 @@ export const Products = () => {
             <div className="font-bold text-xl mb-2">{item.name}</div>
           </div>
           <div className="px-3 pt-4 pb-2">
-            <button className="btn bg-gray-200 rounded-full px-2 py-2 text-sm font-semibold text-gray-700">Részletek</button>
+            <Modal id={item.id} name={item.name} />
           </div>
         </div>
       )}
