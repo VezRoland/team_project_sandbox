@@ -10,8 +10,18 @@ export const Products = () => {
   console.log(data.data);
   
   return (
-    <div style={{ margin:"auto", maxWidth: 360, bgcolor: 'background.paper' }} >
-      ...
+    <div style={{ margin:"auto", maxWidth:"1100px", bgcolor: 'background.paper' }} className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+      {data.data.map((item)=>
+        <div className="max-w-sm rounded overflow-hidden shadow-lg p-2" key={item.id}>
+          <img className='w-full' src={item.img_url} alt={item.name} />
+          <div className="px-3 py-4">
+            <div className="font-bold text-xl mb-2">{item.name}</div>
+          </div>
+          <div className="px-3 pt-4 pb-2">
+            <button className="btn bg-gray-200 rounded-full px-2 py-2 text-sm font-semibold text-gray-700">Részletek</button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
